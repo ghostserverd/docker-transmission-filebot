@@ -16,9 +16,13 @@ RUN echo '@testing http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/
         libmediainfo@testing \
         openjdk8-jre-base
 
-# Install filebot
 WORKDIR /usr/local/bin
+
+# add filebot postprocess
 COPY transmission-postprocess.sh transmission-postprocess.sh
+RUN chmod +rx transmission-postprocess.sh
+
+# install filebot
 COPY FileBot_4.7.7-portable.tar.xz filebot.tar.xz
 RUN ls -lah
 RUN tar xvf filebot.tar.xz
