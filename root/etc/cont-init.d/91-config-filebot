@@ -2,4 +2,5 @@
 
 # chown filebot files
 chown -R abc:abc \
+        /usr/local/bin \
         /config

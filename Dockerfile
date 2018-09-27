@@ -18,6 +18,7 @@ RUN echo '@testing http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/
 
 # Install filebot
 WORKDIR /usr/local/bin
+COPY transmission-postprocess.sh transmission-postprocess.sh
 COPY FileBot_4.7.7-portable.tar.xz filebot.tar.xz
 RUN ls -lah
 RUN tar xvf filebot.tar.xz
