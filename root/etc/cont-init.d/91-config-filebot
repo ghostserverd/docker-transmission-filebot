@@ -1,7 +1,5 @@
 #!/usr/bin/with-contenv bash
 
-cp /usr/local/bin/settings.json /config/settings.json
-
 # chown filebot files
 chown -R abc:abc \
         /usr/local/bin \
