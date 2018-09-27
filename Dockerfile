@@ -17,6 +17,7 @@ RUN echo '@testing http://dl-4.alpinelinux.org/alpine/edge/testing' >> /etc/apk/
         openjdk8-jre-base
 
 WORKDIR /usr/local/bin
+COPY settings.json settings.json
 
 # add filebot postprocess
 COPY transmission-postprocess.sh transmission-postprocess.sh
