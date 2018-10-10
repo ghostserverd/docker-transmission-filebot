@@ -1,4 +1,4 @@
-FROM ghostserverd/transmission
+FROM ghostserverd/transmission-combustion
 
 USER root
 
